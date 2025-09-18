@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Dishanth | Full Stack Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#0f172a',
+                        'secondary-blue': '#2563eb',
+                        'light-blue': '#e0e7ff',
+                        'dark-blue': '#1e293b',
+                        'accent': '#3b82f6',
+                        'text-dark': '#1e293b',
+                        'text-light': '#f1f5f9'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-5">
+            <a href="#" class="text-3xl font-extrabold text-primary-blue font-poppins hover:scale-105 transition-transform duration-300">Ivan<span class="text-accent">Dishanth</span></a>
+
+            <nav>
+                <ul class="hidden md:flex space-x-8 font-medium">
+                    <li><a href="#home" class="relative  hover:text-accent transition duration-300 group">Home<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                    <li><a href="#about" class="relative hover:text-accent transition duration-300 group">About<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                    <li><a href="#services" class="relative hover:text-accent transition duration-300 group">Services<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                    <li><a href="#portfolio" class="relative hover:text-accent transition duration-300 group">Portfolio<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                    <li><a href="#trending" class="relative hover:text-accent transition duration-300 group">Trending<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                    <li><a href="#contact" class="relative hover:text-accent transition duration-300 group">Contact<span class="absolute bottom-[-5px] left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full"></span></a></li>
+                </ul>
+            </nav>
+
+            <div class="md:hidden cursor-pointer z-50" id="mobile-menu-btn">
+                <i class="fas fa-bars text-text-dark text-xl"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed top-0 left-0 w-full h-screen bg-primary-blue bg-opacity-95 backdrop-blur-md transform translate-x-full transition-transform duration-500 z-40 flex flex-col justify-center items-center">
+            <ul class="space-y-8 font-medium text-center">
+                <li><a href="#home" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#services" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">Services</a></li>
+                <li><a href="#portfolio" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">Portfolio</a></li>
+                <li><a href="#trending" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">Trending</a></li>
+                <li><a href="#contact" class="text-text-light text-2xl hover:text-accent transition duration-300" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+            <button class="absolute top-5 right-5 text-text-light text-3xl" onclick="closeMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="pt-40 pb-24 bg-gradient-to-br from-primary-blue via-secondary-blue to-accent text-text-light relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <img src="10.jpg" alt="Ivan Dishanth" class="w-44 h-44 rounded-full object-cover border-4 border-accent shadow-2xl mx-auto mb-8 animate-pulse">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5 font-poppins animate-fade-in-up">Ivan <span class="text-accent animate-bounce">Dishanth</span></h1>
+            <p class="text-lg md:text-xl mb-10 opacity-90 font-poppins animate-fade-in-up delay-200">Full Stack Developer, IT Technician & Designer</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
+                <a href="#portfolio" class="inline-block px-7 py-3 bg-primary-blue text-text-light rounded-md font-medium transition-all duration-300 hover:bg-secondary-blue hover:-translate-y-1 hover:shadow-2xl hover:scale-105">View My Work</a>
+                <a href="#contact" class="inline-block px-7 py-3 bg-transparent border-2 border-accent text-accent rounded-md font-medium transition-all duration-300 hover:bg-accent hover:text-text-light hover:scale-105">Contact Me</a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 relative text-primary-blue font-poppins after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-1 after:bg-accent after:rounded-sm">About Me</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="2.jpg" alt="Ivan working" class="w-full rounded-xl shadow-lg">
+                </div>
+                <div class="about-text">
+                    <h3 class="text-3xl font-bold mb-5 text-primary-blue font-poppins">Full Stack Developer & IT Specialist</h3>
+                    <p class="text-text-dark mb-4 leading-relaxed font-poppins">Hello! I'm Ivan Dishanth, a passionate technology professional with expertise in full stack development, IT solutions, and design. With a keen eye for detail and a commitment to excellence, I create digital solutions that are both functional and visually appealing.</p>
+                    <p class="text-text-dark mb-6 leading-relaxed font-poppins">My journey in technology started 5 years ago, and I've since worked on various projects ranging from web applications to network infrastructure.</p>
+
+                    <div class="flex flex-wrap gap-3 mt-6">
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">JavaScript</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">React</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">Node.js</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">Python</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">UI/UX Design</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">Network Security</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">Cloud Computing</span>
+                        <span class="bg-light-blue text-primary-blue px-4 py-2 rounded-full text-sm font-medium font-poppins">Database Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-light-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 relative text-primary-blue font-poppins after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-1 after:bg-accent after:rounded-sm">My Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center">
+                    <div class="text-5xl text-accent mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary-blue font-poppins">Full Stack Development</h3>
+                    <p class="text-text-dark leading-relaxed font-poppins">Building responsive and scalable web applications using modern technologies and frameworks for both frontend and backend.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center">
+                    <div class="text-5xl text-accent mb-6">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary-blue font-poppins">IT Solutions</h3>
+                    <p class="text-text-dark leading-relaxed font-poppins">Providing comprehensive IT support, network setup, system administration, and troubleshooting services.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl text-center">
+                    <div class="text-5xl text-accent mb-6">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary-blue font-poppins">UI/UX Design</h3>
+                    <p class="text-text-dark leading-relaxed font-poppins">Creating intuitive and visually appealing user interfaces that enhance user experience and engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 relative text-primary-blue font-poppins after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-1 after:bg-accent after:rounded-sm">My Portfolio</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+                   <a href="https://foodly1.vercel.app">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Web Project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary-blue bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2 font-poppins">foodly</h3>
+                        <p class="text-sm font-poppins">Full stack React frontend and Node.js backend</p>
+                    </div>
+                     </a>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+                     <a href="https://daily-habit-tracker-alpha.vercel.app">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="IT Project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary-blue bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2 font-poppins">daily-habit-tracker</h3>
+                        <p class="text-sm font-poppins"></p>
+                    </div>
+                </a>
+                </div>
+
+                <div class="relative rounded-xl overflow-hidden h-64 shadow-lg group">
+                     <a href="https://foodly1.vercel.app">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Design Project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary-blue bg-opacity-90 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 text-center text-white">
+                        <h3 class="text-xl font-bold mb-2 font-poppins"></h3>
+                        <p class="text-sm font-poppins"></p>
+                    </div>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-primary-blue to-dark-blue text-text-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 relative text-text-light font-poppins after:content-[''] after:absolute after:bottom-[-10px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-20 after:h-1 after:bg-accent after:rounded-sm">Get In Touch</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl text-accent">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-poppins">Location</h3>
+                            <p class="font-poppins">Jaffna, Sri Lanka</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl text-accent">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-poppins">Email</h3>
+                            <p class="font-poppins">ivandishanth@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl text-accent">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2 font-poppins">Phone</h3>
+                            <p class="font-poppins">+94 74 330 9582</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="space-y-2">
+                        <input type="text" class="w-full px-4 py-3 rounded-md border-none bg-white bg-opacity-90 text-text-dark font-poppins" placeholder="Your Name" required id="name">
+                    </div>
+
+                    <div class="space-y-2">
+                        <input type="email" class="w-full px-4 py-3 rounded-md border-none bg-white bg-opacity-90 text-text-dark font-poppins" placeholder="Your Email" required id="email">
+                    </div>
+
+                    <div class="space-y-2">
+                        <input type="text" class="w-full px-4 py-3 rounded-md border-none bg-white bg-opacity-90 text-text-dark font-poppins" placeholder="Subject" id="subject">
+                    </div>
+
+                    <div class="space-y-2">
+                        <textarea class="w-full px-4 py-3 rounded-md border-none bg-white bg-opacity-90 text-text-dark font-poppins min-h-40 resize-vertical" placeholder="Your Message" required id="message"></textarea>
+                    </div>
+
+                    <button type="submit" class="inline-block px-7 py-3 bg-primary-blue text-text-light rounded-md font-medium transition-all duration-300 hover:bg-secondary-blue hover:-translate-y-1 hover:shadow-xl">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-blue text-text-light py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+                <div class="footer-about">
+                    <div class="text-2xl font-extrabold mb-4 font-poppins">Ivan<span class="text-accent">.</span></div>
+                    <p class="text-text-light mb-6 leading-relaxed font-poppins">Full Stack Developer, IT Technician & Designer creating digital solutions that make a difference.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-10 transition-all duration-300 hover:bg-accent hover:-translate-y-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-10 transition-all duration-300 hover:bg-accent hover:-translate-y-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-10 transition-all duration-300 hover:bg-accent hover:-translate-y-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-10 transition-all duration-300 hover:bg-accent hover:-translate-y-1"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-white bg-opacity-10 transition-all duration-300 hover:bg-accent hover:-translate-y-1"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="text-xl font-bold mb-6 font-poppins">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-text-light hover:text-accent transition duration-300 font-poppins">Home</a></li>
+                        <li><a href="#about" class="text-text-light hover:text-accent transition duration-300 font-poppins">About</a></li>
+                        <li><a href="#services" class="text-text-light hover:text-accent transition duration-300 font-poppins">Services</a></li>
+                        <li><a href="#portfolio" class="text-text-light hover:text-accent transition duration-300 font-poppins">Portfolio</a></li>
+                        <li><a href="#contact" class="text-text-light hover:text-accent transition duration-300 font-poppins">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="text-xl font-bold mb-6 font-poppins">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-text-light hover:text-accent transition duration-300 font-poppins">Web Development</a></li>
+                        <li><a href="#" class="text-text-light hover:text-accent transition duration-300 font-poppins">IT Support</a></li>
+                        <li><a href="#" class="text-text-light hover:text-accent transition duration-300 font-poppins">UI/UX Design</a></li>
+                        <li><a href="#" class="text-text-light hover:text-accent transition duration-300 font-poppins">Network Solutions</a></li>
+                        <li><a href="#" class="text-text-light hover:text-accent transition duration-300 font-poppins">Cloud Services</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white border-opacity-10 pt-8 text-center">
+                <p class="font-poppins">&copy; 2025 Ivan Dishanth. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenuBtn.innerHTML = mobileMenu.classList.contains('translate-x-full') ?
+                '<i class="fas fa-bars text-text-dark text-xl"></i>' : '<i class="fas fa-times text-text-dark text-xl"></i>';
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars text-text-dark text-xl"></i>';
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white', 'bg-opacity-95', 'shadow-xl', 'border-b', 'border-gray-200');
+                header.classList.remove('bg-transparent');
+            } else {
+                header.classList.remove('bg-white', 'bg-opacity-95', 'shadow-xl', 'border-b', 'border-gray-200');
+                header.classList.add('bg-transparent');
+            }
+        });
+
+        // Backend simulation
+        function simulateApiCall(endpoint) {
+            const loading = document.querySelector('.loading');
+            const response = document.getElementById('api-response');
+            
+            // Show loading
+            loading.style.display = 'block';
+            response.style.display = 'none';
+            
+            // Simulate API delay
+            setTimeout(() => {
+                loading.style.display = 'none';
+                
+                let data;
+                switch(endpoint) {
+                    case 'projects':
+                        data = {
+                            status: "success",
+                            message: "Projects retrieved successfully",
+                            data: [
+                                { id: 1, name: "E-Commerce Platform", technology: "React, Node.js, MongoDB" },
+                                { id: 2, name: "Task Management System", technology: "Vue.js, Express, PostgreSQL" },
+                                { id: 3, name: "Inventory Management", technology: "Angular, Firebase, Firestore" }
+                            ]
+                        };
+                        break;
+                    case 'messages':
+                        data = {
+                            status: "success",
+                            message: "Messages retrieved successfully",
+                            data: [
+                                { id: 1, name: "John Doe", email: "john@example.com", message: "Interested in your services" },
+                                { id: 2, name: "Jane Smith", email: "jane@example.com", message: "Would like to discuss a project" }
+                            ]
+                        };
+                        break;
+                    case 'skills':
+                        data = {
+                            status: "success",
+                            message: "Skills retrieved successfully",
+                            data: {
+                                frontend: ["React", "Vue.js", "Angular", "JavaScript", "TypeScript"],
+                                backend: ["Node.js", "Express", "Python", "Django", "PHP"],
+                                database: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
+                                tools: ["Git", "Docker", "AWS", "Figma", "Photoshop"]
+                            }
+                        };
+                        break;
+                }
+                
+                response.textContent = JSON.stringify(data, null, 2);
+                response.style.display = 'block';
+            }, 1500);
+        }
+
+        // Form submission to email
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            const mailtoUrl = `mailto:ivandishanth@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoUrl;
+            
+            // Reset form
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
